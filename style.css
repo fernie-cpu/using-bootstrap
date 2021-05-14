@@ -1,6 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap");
+
+*,
+::after,
+::before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0 none;
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
+}
+
 :root {
   --body-color: #333;
   --body-background-color: #f4f5f6;
+  --header-top-background-color: #f72210;
 }
 
 body {
@@ -10,9 +28,39 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper .container {
+  max-width: 1310px;
+  margin: 0;
+  position: relative;
+}
+
+.header-top .block {
+  color: white;
+  font: 16px/34px "Roboto Condensed", sans-serif;
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 15px;
     line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 922px) {
+  .page-header {
+    background-color: var(--header-top-background-color);
+  }
+
+  .header-top {
+    position: relative;
+    z-index: 2;
+    height: 95px;
+    padding: 20px 10px 15px;
+  }
+
+  .page-header .logo svg {
+    width: 396px;
+    height: 60px;
+    margin: 10px auto 0;
   }
 }
