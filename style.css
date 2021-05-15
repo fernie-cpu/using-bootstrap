@@ -30,7 +30,7 @@
 body {
   line-height: 18px;
   color: var(--body-color);
-  background-color: var(--body-background-color);
+  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -184,13 +184,17 @@ ul.page-nav {
 }
 
 .trending-wrapper {
-  border: 1px solid var(--border-trending);
+  border-top: 1px solid var(--border-trending);
 }
 
 .trending-topics {
   font: 18px/18px 'Roboto Condensed', sans-serif;
   color: var(--trending-topics-color);
   padding-left: 0;
+}
+
+ul.trending-topics {
+  margin-bottom: 0.4rem;
 }
 
 .trending-topics strong {
@@ -402,7 +406,8 @@ ul.page-nav {
   }
 
   .trending-wrapper {
-    border-top: 2px solid var(--border-top-trending);
+    border-top-color: var(--border-top-trending);
+    border-top-width: 2px;
     padding-top: 13px;
     overflow-y: hidden;
     margin-right: -160px;
