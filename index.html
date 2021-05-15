@@ -13,20 +13,30 @@
       <div class="wrapper">
         <div class="content">
           <header class="page-header">
-            <div class="container">
-              <div class="header-top d-flex align-items-end justify-content-between">
-                <div class="block d-lg-block">Fri, May 14, 2021</div>
+            <div class="header-top d-flex align-items-end justify-content-between">
+                <div class="col-1 d-lg-block">Fri, May 14, 2021</div>
+                <div class="col-2 d-flex align-items-center">
+                  <button class="btn-login">LOGIN</button>
+                  <button class="btn-subscribe d-flex align-items-center">SUBSCRIBE</button>
+                </div>
+            </div>
+            <div class="header-middle">
                 <a href="#" class="logo">
                   <svg>
                     <use xLink:href="logo.svg#logo"></use>
                   </svg>
                 </a>
-                <div class="d-flex align-items-center">
-                  <button class="btn-login">LOGIN</button>
-                  <button class="btn-subscribe d-flex align-items-center">SUBSCRIBE</button>
-                </div>
-              </div>
+                <span class="genericon genericon-menu d-flex flex-column align-items-center justify-content-center">
+                  <span></span>
+                </span>
             </div>
+            <nav class="header-bottom">
+              <div class="d-md-flex justify-content-center">
+                <form class="search-form">
+                  <label class="magnify">Search</label>
+                </form>
+              </div>
+            </nav>
           </header>
         </div>
       </div>
