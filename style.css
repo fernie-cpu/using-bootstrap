@@ -19,6 +19,7 @@
   --body-color: #333;
   --body-background-color: #f4f5f6;
   --header-top-background-color: #f72210;
+  --btn-subscribe-background-color: #ffe400;
 }
 
 body {
@@ -28,10 +29,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+}
+
 .wrapper .container {
   max-width: 1310px;
-  margin: 0;
-  position: relative;
 }
 
 .header-top .block {
@@ -39,10 +43,73 @@ body {
   font: 16px/34px "Roboto Condensed", sans-serif;
 }
 
+.btn-login {
+  background: transparent;
+  color: white;
+}
+
+.btn-subscribe {
+  background-color: var(--btn-subscribe-background-color);
+  border-radius: 24px;
+}
+
+.btn-login,
+.btn-subscribe {
+  font: bold 13px/24px 'Roboto Condensed', sans-serif;
+}
+
+.btn-subscribe::after {
+  content: "";
+  display: inline-block;
+  margin-left: 3px;
+  width: 4px;
+  height: 4px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+@media screen and (max-width: 765px) {
+  .page-header {
+    background-color: var(--header-top-background-color);
+    padding: 15px;
+  }
+
+  .logo svg {
+    width: 132px;
+    height: 20px;
+    display: block;
+  }
+
+  .header-top .block {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   body {
     font-size: 15px;
     line-height: 20px;
+  }
+
+  .btn-login,
+  .btn-subscribe {
+    font-size: 18px;
+    line-height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+
+  .btn-subscribe::after {
+    margin-left: 5px;
+    width: 6px;
+    height: 6px;
+    border-top-width: 2px;
+    border-right-width: 2px;
   }
 }
 
@@ -62,5 +129,12 @@ body {
     width: 396px;
     height: 60px;
     margin: 10px auto 0;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .page-header .btn-subscribe {
+    margin-right: 14px;
+    margin-left: 10px;
   }
 }
